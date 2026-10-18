@@ -46,7 +46,8 @@
     "verify": "node test/verify.mjs && node test/impact.mjs",
     "all": "npm run extract && npm run roles && npm run typography && npm run icons && npm run build && npm run docs && npm run verify",
     "typography": "node scripts/typography.mjs",
-    "icons": "node scripts/icons.mjs"
+    "icons": "node scripts/icons.mjs",
+    "shots": "node test/shot.mjs && node test/animdemo.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.0"
