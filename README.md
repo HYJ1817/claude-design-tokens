@@ -124,15 +124,38 @@ rather than from contrast.
 ### Dark mode compensates font weight
 
 A quirk worth stealing: text rendered light-on-dark reads thinner than the same
-weight dark-on-light. Claude nudges the variable font's `wght` axis in dark mode:
+weight dark-on-light. Claude corrects for this on the variable font's `wght`
+axis, and the correction is a **uniform −40 on every step**:
 
-| Named weight | Light | Dark |
-|---|---|---|
-| medium | 500 | 465 |
-| semibold | 580 | 560 |
-| bold | 600 | 660 |
+| Named weight | Light `font-weight` | Dark `wght` axis | Δ |
+|---|---|---|---|
+| regular | 400 | 360 | −40 |
+| medium | 500 | 460 | −40 |
+| semibold | 580 | 540 | −40 |
+| bold | 600 | 560 | −40 |
 
-(`bold` goes *up*, because it is used for headings that need to stay punchy.)
+Two details that make this work:
+
+1. **The light values are never applied as a `wght` axis.** In light mode
+   `--cds-font-wght-*` is `normal`, so the browser uses the plain `font-weight`
+   property. Only dark mode switches the mechanism to an explicit
+   `font-variation-settings: "wght" N`.
+2. **`grad` (grade) carries the optical weight instead.** Dark mode sets
+   `--cds-font-grad-semibold: 180` and `--cds-font-grad-bold: 200`. Grade changes
+   apparent weight without changing advance width, so text does not reflow when
+   the theme changes.
+
+```css
+/* light: plain font-weight */
+--cds-font-weight-medium: 500;
+--cds-font-wght-medium: normal;
+
+/* dark: axis override */
+--cds-font-wght-medium: "wght" 460;
+```
+
+Note the semantic sizes: `semibold` is **580**, not 600, and `bold` is **600**,
+not 700. The scale is tuned for the variable font, not the usual static ramp.
 
 ## Theme switching
 
@@ -235,3 +258,52 @@ See [`docs/TOKENS.md`](docs/TOKENS.md) for the full role table and
 
 The extraction tooling in `scripts/` and `src/` is MIT. The extracted *values*
 describe a third party's visual design; see [NOTICE.md](NOTICE.md).
+
+---
+
+## Implementation notes for anyone writing their own extractor
+
+Two things cost real time here. Both are easy to get subtly wrong.
+
+### 1. The ASAR data offset is not `16 + jsonLength`
+
+ASAR wraps its JSON header in a Chromium `Pickle`, and the payload is padded to a
+4-byte boundary. The file data starts at:
+
+```
+baseOffset = 8 + headerSize        // headerSize = UInt32LE at byte 4
+```
+
+Using `16 + jsonLength` shifts every read by the padding — 2 bytes on the build
+tested here. Text files then gain a stray `};` prefix, which looks like
+"malformed JSON" and tempts you into writing a string-stripping workaround. Binary
+entries are worse: a `woff2` silently loses its `wOF2` magic and becomes
+unparseable. Read the header, assert it starts with `{`, and compute the offset
+from `headerSize`.
+
+### 2. `:not()` breaks naive theme detection
+
+```css
+[data-mode=dark] .cds-root:not([data-mode=light]):not([data-mode=system]) { … }
+```
+
+That is a **dark** rule, but a substring search for `light` matches inside the
+negation and files it under light. Strip `:not(...)` sub-expressions before
+looking for theme hints.
+
+### 3. Base tokens are aliases, not literals
+
+```css
+.cds-root                     { --cds-font-size-body: var(--cds-font-size-body--lg); }
+.cds-root[data-density=comfortable] { --cds-font-size-body--lg: calc(.9375rem * …); }
+```
+
+A one-level `var()` resolver reports `var(--cds-font-size-body--lg)` and stops.
+Follow the chain to the end, or the whole type scale comes out as aliases.
+
+### 4. `@supports` pairs are not conflicts
+
+Tailwind emits a plain fallback plus a modern value inside
+`@supports (color: color-mix(in lab, red, red))`. Both are correct. Group
+definitions by `(theme, selector, at-rule chain)` so these land in a
+"progressive enhancement" bucket instead of a false conflict list.

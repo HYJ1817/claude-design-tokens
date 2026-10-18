@@ -336,3 +336,145 @@ ${extra}`;
   fs.writeFileSync(path.join(docsDir, 'MOTION.md'), L.join('\n'));
   console.log('[docs] wrote docs/MOTION.md');
 }
+
+/* ------------------------------------------------------------------ */
+/* TYPOGRAPHY.md                                                       */
+/* ------------------------------------------------------------------ */
+
+{
+  const typoPath = path.join(dataDir, 'typography.json');
+  if (fs.existsSync(typoPath)) {
+    const typo = JSON.parse(fs.readFileSync(typoPath, 'utf8'));
+    const L = [];
+    L.push(
+      header(
+        'Typography and sizing',
+        'The type scale, its paired line-heights, the density ladders, and the\n' +
+          'dark-mode font-weight correction.'
+      )
+    );
+    L.push('');
+
+    L.push('## Type scale');
+    L.push('');
+    L.push(
+      'Every size has a paired line-height token. The ratio column is what you ' +
+        'want when re-implementing with a different base size.'
+    );
+    L.push('');
+    L.push('| Role | Size | Line-height | Ratio | Size token |');
+    L.push('|---|---|---|---|---|');
+    for (const s of typo.scale) {
+      const rem = s.rem == null ? '—' : `${s.rem}rem`;
+      const lead = s.leadingRem == null ? '—' : `${s.leadingRem}rem`;
+      L.push(`| ${s.role} | ${rem} | ${lead} | ${s.ratio ?? '—'} | \`${s.sizeToken}\` |`);
+    }
+    L.push('');
+
+    L.push('## Text size preference');
+    L.push('');
+    L.push(
+      'Claude exposes Small / Medium / Large transcript text. Rather than scaling ' +
+        'one value, it re-points the whole scale per surface — note that ' +
+        '`--textmd` only overrides body copy while `--textsm` and `--textlg` ' +
+        'override the full set.'
+    );
+    L.push('');
+
+    const variants = Object.keys(typo.textSizePreference);
+    const roles = [...new Set(variants.flatMap((v) => Object.keys(typo.textSizePreference[v])))];
+    L.push('| Role | ' + variants.join(' | ') + ' |');
+    L.push('|---|' + variants.map(() => '---').join('|') + '|');
+    for (const role of roles) {
+      const cells = variants.map((v) => {
+        const cell = typo.textSizePreference[v][role];
+        return cell ? `${cell.rem} / ${cell.leadingRem}` : '—';
+      });
+      L.push(`| ${role} | ${cells.join(' | ')} |`);
+    }
+    L.push('');
+    L.push('_Cells are `size / line-height` in rem._');
+    L.push('');
+
+    L.push('## Weights');
+    L.push('');
+    L.push(typo.weights.note);
+    L.push('');
+    L.push('| Name | Light `font-weight` | Dark `wght` axis | Δ |');
+    L.push('|---|---|---|---|');
+    for (const w of typo.weights.steps) {
+      L.push(
+        `| ${w.name} | ${w.lightValue ?? '—'} | ${w.darkAxis ? w.darkAxis.value : '—'} | ` +
+          `${w.delta == null ? '—' : w.delta} |`
+      );
+    }
+    L.push('');
+    L.push(
+      `Grade axis in dark mode: \`semibold\` = ${typo.weights.grades.semibold}, ` +
+        `\`bold\` = ${typo.weights.grades.bold}. Grade changes apparent weight ` +
+        'without changing advance width, so nothing reflows on theme change.'
+    );
+    L.push('');
+    L.push(
+      'Note the non-standard ramp: `semibold` is **580**, `bold` is **600**. ' +
+        'Do not assume 600/700.'
+    );
+    L.push('');
+
+    L.push('## Density ladder');
+    L.push('');
+    L.push(
+      '`data-density="comfortable"` bumps the whole scale up one notch. The ' +
+        'unset default is the compact one.'
+    );
+    L.push('');
+    L.push('| Token | Default | comfortable |');
+    L.push('|---|---|---|');
+    const densKeys = [
+      ...new Set([
+        ...Object.keys(typo.densityLadder.compact || {}),
+        ...Object.keys(typo.densityLadder.comfortable || {}),
+      ]),
+    ];
+    for (const k of densKeys) {
+      const a = typo.densityLadder.compact?.[k];
+      const b = typo.densityLadder.comfortable?.[k];
+      const fmt = (v) => (v ? (v.rem == null ? v.raw : `${v.rem}rem`) : '—');
+      L.push(`| \`--${k}\` | ${fmt(a)} | ${fmt(b)} |`);
+    }
+    L.push('');
+
+    L.push('## Step ladder');
+    L.push('');
+    L.push(
+      'Five steps of control sizing. `data-step="1"` through `"5"` set these on ' +
+        'a subtree — useful for dense toolbars.'
+    );
+    L.push('');
+    const stepKeys = [...new Set(Object.values(typo.stepLadder).flatMap(Object.keys))];
+    L.push('| Token | ' + Object.keys(typo.stepLadder).join(' | ') + ' |');
+    L.push('|---|' + Object.keys(typo.stepLadder).map(() => '---').join('|') + '|');
+    for (const k of stepKeys) {
+      const cells = Object.keys(typo.stepLadder).map((n) => {
+        const cell = typo.stepLadder[n][k];
+        return cell ? `${cell.rem}rem` : '—';
+      });
+      L.push(`| \`--${k}\` | ${cells.join(' | ')} |`);
+    }
+    L.push('');
+
+    L.push('## Font stacks');
+    L.push('');
+    for (const [k, v] of Object.entries(typo.fonts)) {
+      L.push(`### \`--${k}\``);
+      L.push('');
+      L.push('```css');
+      L.push(v);
+      L.push('```');
+      L.push('');
+    }
+
+    fs.writeFileSync(path.join(docsDir, 'TYPOGRAPHY.md'), L.join('\n'));
+    console.log('[docs] wrote docs/TYPOGRAPHY.md');
+  }
+}

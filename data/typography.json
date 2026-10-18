@@ -1,0 +1,1288 @@
+{
+  "meta": {
+    "source": {
+      "product": "Claude",
+      "packageName": "@ant/desktop",
+      "version": "2.42304.0",
+      "asar": {
+        "path": "C:/Program Files/WindowsApps/Claude_2.42304.0.0_x64__pzs8sxrjxfjjc/app/resources/app.asar",
+        "sha256": "8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db",
+        "sizeBytes": 49338428
+      },
+      "extractedAt": "2026-10-15T14:33:31.257Z",
+      "extractor": "claude-design-tokens@1",
+      "counts": {
+        "files": 506,
+        "cssFiles": 16,
+        "cssBytes": 339374,
+        "variables": 1142,
+        "keyframes": 58,
+        "fontFaces": 21,
+        "conflicts": 0,
+        "progressiveEnhancement": 66,
+        "unresolvedRefs": 8
+      }
+    },
+    "generatedAt": "2026-10-15T14:33:31.257Z"
+  },
+  "scale": [
+    {
+      "role": "caption",
+      "sizeToken": "--cds-font-size-caption",
+      "size": "calc(.8125rem * var(--cds-rem-scale,1))",
+      "rem": 0.8125,
+      "leadingToken": "--cds-leading-caption",
+      "leading": "calc(1.0625rem * var(--cds-rem-scale,1))",
+      "leadingRem": 1.0625,
+      "ratio": 1.308
+    },
+    {
+      "role": "footnote",
+      "sizeToken": "--cds-font-size-footnote",
+      "size": "calc(.8125rem * var(--cds-rem-scale,1))",
+      "rem": 0.8125,
+      "leadingToken": "--cds-leading-footnote",
+      "leading": "calc(1.0625rem * var(--cds-rem-scale,1))",
+      "leadingRem": 1.0625,
+      "ratio": 1.308
+    },
+    {
+      "role": "code",
+      "sizeToken": "--cds-font-size-code",
+      "size": "calc(.8125rem * var(--cds-rem-scale,1))",
+      "rem": 0.8125,
+      "leadingToken": "--cds-leading-code",
+      "leading": "calc(1.1875rem * var(--cds-rem-scale,1))",
+      "leadingRem": 1.1875,
+      "ratio": 1.462
+    },
+    {
+      "role": "body",
+      "sizeToken": "--cds-font-size-body",
+      "size": "calc(.9375rem * var(--cds-rem-scale,1))",
+      "rem": 0.9375,
+      "leadingToken": "--cds-leading-body",
+      "leading": "calc(1.375rem * var(--cds-rem-scale,1))",
+      "leadingRem": 1.375,
+      "ratio": 1.467
+    },
+    {
+      "role": "prose",
+      "sizeToken": "--cds-font-size-prose",
+      "size": "1.125rem",
+      "rem": 1.125,
+      "leadingToken": "--cds-leading-prose",
+      "leading": "1.6875rem",
+      "leadingRem": 1.6875,
+      "ratio": 1.5
+    },
+    {
+      "role": "heading",
+      "sizeToken": "--cds-font-size-heading",
+      "size": "calc(1rem * var(--cds-rem-scale,1))",
+      "rem": 1,
+      "leadingToken": "--cds-leading-heading",
+      "leading": "calc(1.5rem * var(--cds-rem-scale,1))",
+      "leadingRem": 1.5,
+      "ratio": 1.5
+    },
+    {
+      "role": "title",
+      "sizeToken": "--cds-font-size-title",
+      "size": "calc(1.375rem * var(--cds-rem-scale,1))",
+      "rem": 1.375,
+      "leadingToken": "--cds-leading-title",
+      "leading": "calc(1.75rem * var(--cds-rem-scale,1))",
+      "leadingRem": 1.75,
+      "ratio": 1.273
+    }
+  ],
+  "textSizePreference": {
+    "default": {
+      "body": {
+        "size": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375,
+        "leading": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.375
+      },
+      "prose": {
+        "size": "1.125rem",
+        "rem": 1.125,
+        "leading": "1.6875rem",
+        "leadingRem": 1.6875
+      },
+      "prose--xs": {
+        "size": ".9375rem",
+        "rem": 0.9375,
+        "leading": "1.375rem",
+        "leadingRem": 1.375
+      },
+      "prose--sm": {
+        "size": "1rem",
+        "rem": 1,
+        "leading": "1.5rem",
+        "leadingRem": 1.5
+      },
+      "prose--lg": {
+        "size": "1.125rem",
+        "rem": 1.125,
+        "leading": "1.6875rem",
+        "leadingRem": 1.6875
+      },
+      "heading": {
+        "size": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1,
+        "leading": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.5
+      }
+    },
+    "--textsm": {
+      "body": {
+        "size": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125,
+        "leading": "calc(1.1875rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.1875
+      },
+      "prose": {
+        "size": ".9375rem",
+        "rem": 0.9375,
+        "leading": "1.375rem",
+        "leadingRem": 1.375
+      },
+      "prose--xs": {
+        "size": ".8125rem",
+        "rem": 0.8125,
+        "leading": "1.1875rem",
+        "leadingRem": 1.1875
+      },
+      "prose--sm": {
+        "size": ".875rem",
+        "rem": 0.875,
+        "leading": "1.25rem",
+        "leadingRem": 1.25
+      },
+      "prose--lg": {
+        "size": "1rem",
+        "rem": 1,
+        "leading": "1.5rem",
+        "leadingRem": 1.5
+      },
+      "heading": {
+        "size": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875,
+        "leading": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.25
+      }
+    },
+    "--textmd": {
+      "body": {
+        "size": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875,
+        "leading": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.25
+      }
+    },
+    "--textlg": {
+      "body": {
+        "size": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375,
+        "leading": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.375
+      },
+      "prose": {
+        "size": "1.125rem",
+        "rem": 1.125,
+        "leading": "1.6875rem",
+        "leadingRem": 1.6875
+      },
+      "prose--xs": {
+        "size": ".9375rem",
+        "rem": 0.9375,
+        "leading": "1.375rem",
+        "leadingRem": 1.375
+      },
+      "prose--sm": {
+        "size": "1rem",
+        "rem": 1,
+        "leading": "1.5rem",
+        "leadingRem": 1.5
+      },
+      "prose--lg": {
+        "size": "1.125rem",
+        "rem": 1.125,
+        "leading": "1.6875rem",
+        "leadingRem": 1.6875
+      },
+      "heading": {
+        "size": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1,
+        "leading": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.5
+      }
+    },
+    "--own": {
+      "body": {
+        "size": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875,
+        "leading": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "leadingRem": 1.25
+      }
+    }
+  },
+  "weights": {
+    "steps": [
+      {
+        "name": "regular",
+        "token": "--cds-font-weight-regular",
+        "lightValue": 400,
+        "lightAxis": null,
+        "darkAxis": {
+          "axis": "wght",
+          "value": 360
+        },
+        "delta": -40
+      },
+      {
+        "name": "medium",
+        "token": "--cds-font-weight-medium",
+        "lightValue": 500,
+        "lightAxis": null,
+        "darkAxis": {
+          "axis": "wght",
+          "value": 460
+        },
+        "delta": -40
+      },
+      {
+        "name": "semibold",
+        "token": "--cds-font-weight-semibold",
+        "lightValue": 580,
+        "lightAxis": null,
+        "darkAxis": {
+          "axis": "wght",
+          "value": 540
+        },
+        "delta": -40
+      },
+      {
+        "name": "bold",
+        "token": "--cds-font-weight-bold",
+        "lightValue": 600,
+        "lightAxis": null,
+        "darkAxis": {
+          "axis": "wght",
+          "value": 560
+        },
+        "delta": -40
+      }
+    ],
+    "grades": {
+      "semibold": "180",
+      "bold": "200"
+    },
+    "note": "Light mode uses the plain font-weight property (wght tokens are \"normal\"). Dark mode switches to an explicit font-variation-settings wght axis, uniformly -40."
+  },
+  "densityLadder": {
+    "compact": {
+      "cds-font-size-text-entry-floor": {
+        "raw": "16px",
+        "rem": null
+      },
+      "cds-radius": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-radius-composer": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-h-control": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1.125rem * var(--cds-rem-scale,1))",
+        "rem": 1.125
+      },
+      "cds-icon": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-md": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-lg": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-pad-xl": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-gap-xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-gap-sm": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-gap-md": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-gap-lg": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-gap-xl": {
+        "raw": "calc(2rem * var(--cds-rem-scale,1))",
+        "rem": 2
+      },
+      "cds-font-size-caption": {
+        "raw": "calc(.6875rem * var(--cds-rem-scale,1))",
+        "rem": 0.6875
+      },
+      "cds-font-size-footnote": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-code": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-body": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose": {
+        "raw": ".875rem",
+        "rem": 0.875
+      },
+      "cds-font-size-heading": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-title": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-radius--xs": {
+        "raw": "calc(.3125rem * var(--cds-rem-scale,1))",
+        "rem": 0.3125
+      },
+      "cds-radius--sm": {
+        "raw": "calc(.3125rem * var(--cds-rem-scale,1))",
+        "rem": 0.3125
+      },
+      "cds-radius--lg": {
+        "raw": "calc(.4375rem * var(--cds-rem-scale,1))",
+        "rem": 0.4375
+      },
+      "cds-h-control--xs": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-h-control--sm": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-h-control--lg": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-h-control-nested--xs": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-h-control-nested--sm": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-h-control-nested--lg": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-icon--xs": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-icon--sm": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-icon--lg": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-pad-xs--xs": {
+        "raw": "calc(.125rem * var(--cds-rem-scale,1))",
+        "rem": 0.125
+      },
+      "cds-pad-xs--sm": {
+        "raw": "calc(.125rem * var(--cds-rem-scale,1))",
+        "rem": 0.125
+      },
+      "cds-pad-xs--lg": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-sm--xs": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-pad-sm--sm": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-pad-sm--lg": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-md--xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-md--sm": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-md--lg": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-pad-lg--xs": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-pad-lg--sm": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-pad-lg--lg": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-pad-xl--xs": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-pad-xl--sm": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-pad-xl--lg": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-font-size-caption--xs": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-font-size-caption--sm": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-font-size-caption--lg": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-body--xs": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-body--sm": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-body--lg": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--xs": {
+        "raw": ".8125rem",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--sm": {
+        "raw": ".8125rem",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--lg": {
+        "raw": ".9375rem",
+        "rem": 0.9375
+      },
+      "cds-font-size-body--textsm": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-body--textmd": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-body--textlg": {
+        "raw": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375
+      },
+      "cds-font-size-body--own": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--textsm": {
+        "raw": ".8125rem",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--xs--textsm": {
+        "raw": ".8125rem",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--sm--textsm": {
+        "raw": ".8125rem",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--lg--textsm": {
+        "raw": ".875rem",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--textlg": {
+        "raw": ".9375rem",
+        "rem": 0.9375
+      },
+      "cds-font-size-prose--xs--textlg": {
+        "raw": ".875rem",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--sm--textlg": {
+        "raw": ".875rem",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--lg--textlg": {
+        "raw": "1rem",
+        "rem": 1
+      },
+      "cds-font-size-heading--textsm": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-heading--textlg": {
+        "raw": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375
+      }
+    },
+    "comfortable": {
+      "cds-radius": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-radius-composer": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-h-control": {
+        "raw": "calc(2rem * var(--cds-rem-scale,1))",
+        "rem": 2
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-icon": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-md": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-pad-lg": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-pad-xl": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-gap-xs": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-gap-sm": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-gap-md": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-gap-lg": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-gap-xl": {
+        "raw": "calc(2.5rem * var(--cds-rem-scale,1))",
+        "rem": 2.5
+      },
+      "cds-font-size-caption": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-footnote": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-code": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-body": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-prose": {
+        "raw": "1rem",
+        "rem": 1
+      },
+      "cds-font-size-heading": {
+        "raw": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375
+      },
+      "cds-font-size-title": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-leading-caption": {
+        "raw": "calc(1.0625rem * var(--cds-rem-scale,1))",
+        "rem": 1.0625
+      },
+      "cds-leading-footnote": {
+        "raw": "calc(1.0625rem * var(--cds-rem-scale,1))",
+        "rem": 1.0625
+      },
+      "cds-leading-code": {
+        "raw": "calc(1.1875rem * var(--cds-rem-scale,1))",
+        "rem": 1.1875
+      },
+      "cds-leading-body": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-leading-prose": {
+        "raw": "1.5rem",
+        "rem": 1.5
+      },
+      "cds-leading-heading": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-leading-title": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-avatar-xs": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-avatar-sm": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-avatar-md": {
+        "raw": "calc(2rem * var(--cds-rem-scale,1))",
+        "rem": 2
+      },
+      "cds-avatar-lg": {
+        "raw": "calc(2.5rem * var(--cds-rem-scale,1))",
+        "rem": 2.5
+      },
+      "cds-avatar-text-xs": {
+        "raw": "calc(.5625rem * var(--cds-rem-scale,1))",
+        "rem": 0.5625
+      },
+      "cds-checkbox": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-checkbox-glyph": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-checkbox-radius": {
+        "raw": "calc(.3125rem * var(--cds-rem-scale,1))",
+        "rem": 0.3125
+      },
+      "cds-panel-radius": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-switch-h": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-radius--xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-radius--sm": {
+        "raw": "calc(.4375rem * var(--cds-rem-scale,1))",
+        "rem": 0.4375
+      },
+      "cds-radius--lg": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-h-control--xs": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-h-control--sm": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-h-control--lg": {
+        "raw": "calc(2.5rem * var(--cds-rem-scale,1))",
+        "rem": 2.5
+      },
+      "cds-h-control-nested--xs": {
+        "raw": "calc(1.125rem * var(--cds-rem-scale,1))",
+        "rem": 1.125
+      },
+      "cds-h-control-nested--sm": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-h-control-nested--lg": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-icon--xs": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-icon--sm": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-icon--lg": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-pad-xs--xs": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-pad-xs--sm": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-xs--lg": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-sm--xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-sm--sm": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-sm--lg": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-pad-md--xs": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-md--sm": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-pad-md--lg": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-pad-lg--xs": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-pad-lg--sm": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-pad-lg--lg": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-pad-xl--xs": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-pad-xl--sm": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-pad-xl--lg": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-font-size-caption--xs": {
+        "raw": "calc(.6875rem * var(--cds-rem-scale,1))",
+        "rem": 0.6875
+      },
+      "cds-font-size-caption--sm": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-font-size-caption--lg": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-body--xs": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-body--sm": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-body--lg": {
+        "raw": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375
+      },
+      "cds-font-size-prose--xs": {
+        "raw": ".875rem",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--sm": {
+        "raw": ".9375rem",
+        "rem": 0.9375
+      },
+      "cds-font-size-prose--lg": {
+        "raw": "1.125rem",
+        "rem": 1.125
+      },
+      "cds-leading-body--xs": {
+        "raw": "calc(1.1875rem * var(--cds-rem-scale,1))",
+        "rem": 1.1875
+      },
+      "cds-leading-body--sm": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-leading-body--lg": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-leading-prose--xs": {
+        "raw": "1.25rem",
+        "rem": 1.25
+      },
+      "cds-leading-prose--sm": {
+        "raw": "1.375rem",
+        "rem": 1.375
+      },
+      "cds-leading-prose--lg": {
+        "raw": "1.6875rem",
+        "rem": 1.6875
+      },
+      "cds-checkbox--xs": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-checkbox--sm": {
+        "raw": "calc(1.125rem * var(--cds-rem-scale,1))",
+        "rem": 1.125
+      },
+      "cds-checkbox--lg": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-checkbox-glyph--xs": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-checkbox-glyph--sm": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-checkbox-glyph--lg": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-checkbox-radius--xs": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-checkbox-radius--sm": {
+        "raw": "calc(.3125rem * var(--cds-rem-scale,1))",
+        "rem": 0.3125
+      },
+      "cds-checkbox-radius--lg": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-switch-h--xs": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-switch-h--sm": {
+        "raw": "calc(1.125rem * var(--cds-rem-scale,1))",
+        "rem": 1.125
+      },
+      "cds-switch-h--lg": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-font-size-body--textsm": {
+        "raw": "calc(.8125rem * var(--cds-rem-scale,1))",
+        "rem": 0.8125
+      },
+      "cds-font-size-body--textmd": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-body--textlg": {
+        "raw": "calc(.9375rem * var(--cds-rem-scale,1))",
+        "rem": 0.9375
+      },
+      "cds-font-size-body--own": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--textsm": {
+        "raw": ".9375rem",
+        "rem": 0.9375
+      },
+      "cds-font-size-prose--xs--textsm": {
+        "raw": ".8125rem",
+        "rem": 0.8125
+      },
+      "cds-font-size-prose--sm--textsm": {
+        "raw": ".875rem",
+        "rem": 0.875
+      },
+      "cds-font-size-prose--lg--textsm": {
+        "raw": "1rem",
+        "rem": 1
+      },
+      "cds-font-size-prose--textlg": {
+        "raw": "1.125rem",
+        "rem": 1.125
+      },
+      "cds-font-size-prose--xs--textlg": {
+        "raw": ".9375rem",
+        "rem": 0.9375
+      },
+      "cds-font-size-prose--sm--textlg": {
+        "raw": "1rem",
+        "rem": 1
+      },
+      "cds-font-size-prose--lg--textlg": {
+        "raw": "1.125rem",
+        "rem": 1.125
+      },
+      "cds-font-size-heading--textsm": {
+        "raw": "calc(.875rem * var(--cds-rem-scale,1))",
+        "rem": 0.875
+      },
+      "cds-font-size-heading--textlg": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-leading-body--textsm": {
+        "raw": "calc(1.1875rem * var(--cds-rem-scale,1))",
+        "rem": 1.1875
+      },
+      "cds-leading-body--textmd": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-leading-body--textlg": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-leading-body--own": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-leading-prose--textsm": {
+        "raw": "1.375rem",
+        "rem": 1.375
+      },
+      "cds-leading-prose--xs--textsm": {
+        "raw": "1.1875rem",
+        "rem": 1.1875
+      },
+      "cds-leading-prose--sm--textsm": {
+        "raw": "1.25rem",
+        "rem": 1.25
+      },
+      "cds-leading-prose--lg--textsm": {
+        "raw": "1.5rem",
+        "rem": 1.5
+      },
+      "cds-leading-prose--textlg": {
+        "raw": "1.6875rem",
+        "rem": 1.6875
+      },
+      "cds-leading-prose--xs--textlg": {
+        "raw": "1.375rem",
+        "rem": 1.375
+      },
+      "cds-leading-prose--sm--textlg": {
+        "raw": "1.5rem",
+        "rem": 1.5
+      },
+      "cds-leading-prose--lg--textlg": {
+        "raw": "1.6875rem",
+        "rem": 1.6875
+      },
+      "cds-leading-heading--textsm": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-leading-heading--textlg": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      }
+    }
+  },
+  "stepLadder": {
+    "1": {
+      "cds-radius": {
+        "raw": "calc(.3125rem * var(--cds-rem-scale,1))",
+        "rem": 0.3125
+      },
+      "cds-h-control": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-icon": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.125rem * var(--cds-rem-scale,1))",
+        "rem": 0.125
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-pad-md": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      }
+    },
+    "2": {
+      "cds-radius": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-h-control": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1.125rem * var(--cds-rem-scale,1))",
+        "rem": 1.125
+      },
+      "cds-icon": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.25rem * var(--cds-rem-scale,1))",
+        "rem": 0.25
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-md": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      }
+    },
+    "3": {
+      "cds-radius": {
+        "raw": "calc(.4375rem * var(--cds-rem-scale,1))",
+        "rem": 0.4375
+      },
+      "cds-h-control": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-icon": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-md": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      }
+    },
+    "4": {
+      "cds-radius": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-h-control": {
+        "raw": "calc(2rem * var(--cds-rem-scale,1))",
+        "rem": 2
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1.375rem * var(--cds-rem-scale,1))",
+        "rem": 1.375
+      },
+      "cds-icon": {
+        "raw": "calc(1.25rem * var(--cds-rem-scale,1))",
+        "rem": 1.25
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.375rem * var(--cds-rem-scale,1))",
+        "rem": 0.375
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-md": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      }
+    },
+    "5": {
+      "cds-radius": {
+        "raw": "calc(.625rem * var(--cds-rem-scale,1))",
+        "rem": 0.625
+      },
+      "cds-h-control": {
+        "raw": "calc(2.5rem * var(--cds-rem-scale,1))",
+        "rem": 2.5
+      },
+      "cds-h-control-nested": {
+        "raw": "calc(1.75rem * var(--cds-rem-scale,1))",
+        "rem": 1.75
+      },
+      "cds-icon": {
+        "raw": "calc(1.5rem * var(--cds-rem-scale,1))",
+        "rem": 1.5
+      },
+      "cds-pad-xs": {
+        "raw": "calc(.5rem * var(--cds-rem-scale,1))",
+        "rem": 0.5
+      },
+      "cds-pad-sm": {
+        "raw": "calc(.75rem * var(--cds-rem-scale,1))",
+        "rem": 0.75
+      },
+      "cds-pad-md": {
+        "raw": "calc(1rem * var(--cds-rem-scale,1))",
+        "rem": 1
+      }
+    }
+  },
+  "sizeLadder": {
+    "xs": {
+      "cds-radius": "var(--cds-radius--xs)",
+      "cds-h-control": "var(--cds-h-control--xs)",
+      "cds-h-control-nested": "var(--cds-h-control-nested--xs)",
+      "cds-icon": "var(--cds-icon--xs)",
+      "cds-pad-xs": "var(--cds-pad-xs--xs)",
+      "cds-pad-sm": "var(--cds-pad-sm--xs)",
+      "cds-pad-md": "var(--cds-pad-md--xs)",
+      "cds-pad-lg": "var(--cds-pad-lg--xs)",
+      "cds-pad-xl": "var(--cds-pad-xl--xs)",
+      "cds-font-size-caption": "var(--cds-font-size-caption--xs)",
+      "cds-font-size-body": "var(--cds-font-size-body--xs)",
+      "cds-font-size-prose": "var(--cds-font-size-prose--xs)",
+      "cds-leading-body": "var(--cds-leading-body--xs)",
+      "cds-leading-prose": "var(--cds-leading-prose--xs)",
+      "cds-checkbox": "var(--cds-checkbox--xs)",
+      "cds-checkbox-glyph": "var(--cds-checkbox-glyph--xs)",
+      "cds-checkbox-radius": "var(--cds-checkbox-radius--xs)",
+      "cds-switch-h": "var(--cds-switch-h--xs)"
+    },
+    "sm": {
+      "cds-radius": "var(--cds-radius--sm)",
+      "cds-h-control": "var(--cds-h-control--sm)",
+      "cds-h-control-nested": "var(--cds-h-control-nested--sm)",
+      "cds-icon": "var(--cds-icon--sm)",
+      "cds-pad-xs": "var(--cds-pad-xs--sm)",
+      "cds-pad-sm": "var(--cds-pad-sm--sm)",
+      "cds-pad-md": "var(--cds-pad-md--sm)",
+      "cds-pad-lg": "var(--cds-pad-lg--sm)",
+      "cds-pad-xl": "var(--cds-pad-xl--sm)",
+      "cds-font-size-caption": "var(--cds-font-size-caption--sm)",
+      "cds-font-size-body": "var(--cds-font-size-body--sm)",
+      "cds-font-size-prose": "var(--cds-font-size-prose--sm)",
+      "cds-leading-body": "var(--cds-leading-body--sm)",
+      "cds-leading-prose": "var(--cds-leading-prose--sm)",
+      "cds-checkbox": "var(--cds-checkbox--sm)",
+      "cds-checkbox-glyph": "var(--cds-checkbox-glyph--sm)",
+      "cds-checkbox-radius": "var(--cds-checkbox-radius--sm)",
+      "cds-switch-h": "var(--cds-switch-h--sm)"
+    },
+    "lg": {
+      "cds-radius": "var(--cds-radius--lg)",
+      "cds-h-control": "var(--cds-h-control--lg)",
+      "cds-h-control-nested": "var(--cds-h-control-nested--lg)",
+      "cds-icon": "var(--cds-icon--lg)",
+      "cds-pad-xs": "var(--cds-pad-xs--lg)",
+      "cds-pad-sm": "var(--cds-pad-sm--lg)",
+      "cds-pad-md": "var(--cds-pad-md--lg)",
+      "cds-pad-lg": "var(--cds-pad-lg--lg)",
+      "cds-pad-xl": "var(--cds-pad-xl--lg)",
+      "cds-font-size-caption": "var(--cds-font-size-caption--lg)",
+      "cds-font-size-body": "var(--cds-font-size-body--lg)",
+      "cds-font-size-prose": "var(--cds-font-size-prose--lg)",
+      "cds-leading-body": "var(--cds-leading-body--lg)",
+      "cds-leading-prose": "var(--cds-leading-prose--lg)",
+      "cds-checkbox": "var(--cds-checkbox--lg)",
+      "cds-checkbox-glyph": "var(--cds-checkbox-glyph--lg)",
+      "cds-checkbox-radius": "var(--cds-checkbox-radius--lg)",
+      "cds-switch-h": "var(--cds-switch-h--lg)"
+    }
+  },
+  "fonts": {
+    "cds-font-sans": "var(--cds-font-system)",
+    "cds-font-sans-display": "var(--cds-font-sans)",
+    "cds-font-mono": "var(--cds-font-mono-override,) var(--font-anthropic-mono,\"SF Mono\"), \"SF Mono\", ui-monospace, Menlo, Consolas, monospace",
+    "cds-font-system": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"PingFang SC\", \"PingFang TC\", \"Hiragino Sans\", \"Apple SD Gothic Neo\", sans-serif",
+    "cds-font-voice": "var(--font-anthropic-serif,ui-serif), ui-serif, Georgia, \"Times New Roman\", serif"
+  }
+}

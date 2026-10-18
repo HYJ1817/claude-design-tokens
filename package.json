@@ -34,7 +34,8 @@
     "./tokens.json": "./data/tokens.json",
     "./roles.json": "./data/roles.json",
     "./keyframes.json": "./data/keyframes.json",
-    "./report.json": "./data/report.json"
+    "./report.json": "./data/report.json",
+    "./typography.json": "./data/typography.json"
   },
   "scripts": {
     "extract": "node scripts/extract.mjs",
@@ -42,7 +43,8 @@
     "roles": "node scripts/roles.mjs",
     "docs": "node scripts/docs.mjs",
     "verify": "node test/verify.mjs",
-    "all": "npm run extract && npm run roles && npm run build && npm run docs && npm run verify"
+    "all": "npm run extract && npm run roles && npm run typography && npm run build && npm run docs && npm run verify",
+    "typography": "node scripts/typography.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.0"

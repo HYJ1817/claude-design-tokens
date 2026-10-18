@@ -132,17 +132,14 @@ const cssFiles = allEntries
 
 log(`[extract] files : ${allEntries.length} total, ${cssFiles.length} css`);
 
-/* package.json in some builds is prefixed with junk and has trailing content
- * that breaks strict JSON parsing, so pull only the fields we need. */
 const pkg = {};
 try {
-  const raw = asar.readText('/package.json');
+  const parsed = JSON.parse(asar.readText('/package.json'));
   for (const field of ['name', 'productName', 'version']) {
-    const m = raw.match(new RegExp(`"${field}"\\s*:\\s*"([^"]*)"`));
-    if (m) pkg[field] = m[1];
+    if (parsed[field]) pkg[field] = parsed[field];
   }
 } catch {
-  /* not present */
+  /* not present or unparseable */
 }
 
 /* ------------------------------------------------------------------ */
