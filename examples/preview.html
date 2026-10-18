@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude design tokens — live preview</title>
+<link rel="stylesheet" href="../dist/claude-tokens.css">
+<link rel="stylesheet" href="../dist/claude-motion.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+
+  body {
+    font-family: var(--cds-font-sans);
+    font-size: var(--cds-font-size-body);
+    background: #6b6b6b;
+    padding: 24px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  }
+
+  /* The scope element. Everything inside reads tokens from here. */
+  .panel {
+    background: var(--cds-page-bg);
+    color: var(--cds-text-primary);
+    border-radius: var(--cds-panel-radius);
+    padding: 20px;
+    box-shadow: var(--cds-shadow-md);
+    font-family: var(--cds-font-sans);
+    font-size: var(--cds-font-size-body);
+    line-height: 1.5;
+  }
+
+  h2 {
+    margin: 0 0 4px;
+    font-size: var(--cds-font-size-heading);
+    font-weight: var(--cds-font-weight-semibold);
+  }
+
+  .hint {
+    color: var(--cds-text-secondary);
+    font-size: var(--cds-font-size-footnote);
+    margin: 0 0 16px;
+  }
+
+  h3 {
+    margin: 20px 0 8px;
+    font-size: var(--cds-font-size-caption);
+    font-weight: var(--cds-font-weight-medium);
+    color: var(--cds-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+  /* ---- buttons ---- */
+  .btn {
+    font: inherit;
+    font-size: var(--cds-font-size-caption);
+    font-weight: var(--cds-font-weight-medium);
+    border: 1px solid transparent;
+    border-radius: var(--cds-radius--sm);
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: background var(--cds-dur-base) var(--cds-ease-out),
+                color var(--cds-dur-base) var(--cds-ease-out),
+                box-shadow var(--cds-dur-base) var(--cds-ease-out);
+  }
+  .btn:focus-visible {
+    outline: none;
+    box-shadow: var(--cds-focus-shadow);
+  }
+
+  .btn-brand {
+    background: var(--cds-fill-brand);
+    color: var(--cds-text-inverted);
+  }
+  .btn-brand:hover { background: var(--cds-fill-brand-hover); }
+
+  .btn-accent {
+    background: var(--cds-fill-accent);
+    color: var(--cds-text-inverted);
+  }
+  .btn-accent:hover { background: var(--cds-fill-accent-hover); }
+
+  .btn-secondary {
+    background: var(--cds-fill-secondary);
+    color: var(--cds-text-primary);
+    border-color: var(--cds-border);
+  }
+  .btn-secondary:hover { background: var(--cds-fill-control-hover); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--cds-text-secondary);
+  }
+  .btn-ghost:hover {
+    background: var(--cds-fill-ghost-hover);
+    color: var(--cds-text-primary);
+  }
+
+  .btn-danger { background: var(--cds-fill-danger); color: #fff; }
+  .btn-danger:hover { background: var(--cds-fill-danger-hover); }
+
+  /* ---- surface ladder ---- */
+  .surfaces { display: grid; gap: 8px; }
+  .surface {
+    border: 1px solid var(--cds-border);
+    border-radius: var(--cds-radius--sm);
+    padding: 10px 12px;
+    font-size: var(--cds-font-size-footnote);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .surface code {
+    font-family: var(--cds-font-mono);
+    color: var(--cds-text-secondary);
+    font-size: var(--cds-font-size-caption);
+  }
+  .s0 { background: var(--cds-surface-0); }
+  .s1 { background: var(--cds-surface-1); }
+  .s2 { background: var(--cds-surface-2); box-shadow: var(--cds-shadow-sm); }
+  .s3 { background: var(--cds-surface-3); box-shadow: var(--cds-shadow-lg); }
+
+  /* ---- swatches ---- */
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+    gap: 6px;
+  }
+  .sw {
+    aspect-ratio: 1;
+    border-radius: var(--cds-radius--xs);
+    border: 1px solid var(--cds-border);
+    position: relative;
+    transition: transform var(--cds-dur-snap) var(--cds-ease-overshoot);
+  }
+  .sw:hover { transform: scale(1.12); }
+  .sw::after {
+    content: attr(data-step);
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
+    font-size: 9px;
+    font-family: var(--cds-font-mono);
+    color: var(--cds-text-secondary);
+    mix-blend-mode: difference;
+    filter: invert(1);
+  }
+
+  /* ---- status pills ---- */
+  .pill {
+    font-size: var(--cds-font-size-caption);
+    font-weight: var(--cds-font-weight-medium);
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+  }
+  .pill-danger  { background: var(--cds-bg-danger);  color: var(--cds-text-danger);  border-color: var(--cds-border-danger); }
+  .pill-success { background: var(--cds-bg-success); color: var(--cds-text-success); border-color: var(--cds-border-success); }
+  .pill-warning { background: var(--cds-bg-warning); color: var(--cds-text-warning); border-color: var(--cds-border-warning); }
+  .pill-accent  { background: var(--cds-bg-accent);  color: var(--cds-text-accent);  border-color: var(--cds-border-accent); }
+  .pill-pro     { background: var(--cds-bg-pro);     color: var(--cds-text-pro);     border-color: var(--cds-border-pro); }
+
+  /* ---- input ---- */
+  .input {
+    font: inherit;
+    font-size: var(--cds-font-size-body);
+    width: 100%;
+    background: var(--cds-fill-field);
+    color: var(--cds-text-primary);
+    border: 1px solid var(--cds-border);
+    border-radius: var(--cds-radius-composer);
+    padding: 10px 14px;
+    transition: box-shadow var(--cds-dur-base) var(--cds-ease-out);
+  }
+  .input::placeholder { color: var(--cds-text-muted); }
+  .input:focus {
+    outline: none;
+    box-shadow: var(--cds-focus-shadow);
+  }
+
+  /* ---- motion demo ---- */
+  .motion-stage {
+    display: grid;
+    gap: 10px;
+  }
+  .motion-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--cds-font-size-caption);
+    color: var(--cds-text-secondary);
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--cds-fill-brand);
+    flex: 0 0 auto;
+  }
+  .motion-item code { font-family: var(--cds-font-mono); }
+
+  .replay { animation: none; }
+
+  .kf-reveal   { animation: cds-reveal-in var(--cds-dur-base) var(--cds-ease-out) both; }
+  .kf-morph    { animation: cds-morph-in var(--cds-dur-base) var(--cds-ease-out) both; }
+  .kf-chip     { animation: cds-chip-in var(--cds-dur-base) var(--cds-ease-out) both; }
+  .kf-pulse    { animation: cds-dot-pulse 1.6s infinite; }
+  .kf-halo     { animation: cds-working-dot-halo var(--cds-dur-base) var(--cds-ease-out) infinite; }
+  .kf-sweep    { animation: cds-skeleton-sweep 2s linear infinite; }
+
+  .skeleton {
+    height: 12px;
+    border-radius: 999px;
+    background: var(--cds-skeleton-base);
+    position: relative;
+    overflow: hidden;
+  }
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, var(--cds-skeleton-sheen), transparent);
+    animation: cds-skeleton-sweep 2s linear infinite;
+  }
+
+  .spring-demo {
+    transition: transform 320ms var(--cds-btn-spring);
+  }
+  .spring-demo:active { transform: scale(.9); }
+
+  /* ---- theme switch ---- */
+  .toolbar {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-family: system-ui, sans-serif;
+    color: #fff;
+    font-size: 13px;
+  }
+  .toolbar button {
+    font: inherit;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid #ffffff40;
+    background: #ffffff1a;
+    color: #fff;
+    cursor: pointer;
+  }
+  .toolbar button[aria-pressed="true"] {
+    background: #fff;
+    color: #111;
+    border-color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <strong>data-mode:</strong>
+  <button data-set="light">light</button>
+  <button data-set="dark">dark</button>
+  <button data-set="system" aria-pressed="true">system</button>
+</div>
+
+<div class="panel cds-root" data-mode="system">
+  <h2>Claude tokens</h2>
+  <p class="hint">Everything on this page is styled with <code>--cds-*</code> variables only.</p>
+
+  <h3>Buttons</h3>
+  <div class="row">
+    <button class="btn btn-brand">Continue</button>
+    <button class="btn btn-accent">Accent</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-ghost">Ghost</button>
+    <button class="btn btn-danger">Delete</button>
+  </div>
+
+  <h3>Surface ladder</h3>
+  <div class="surfaces">
+    <div class="surface s0"><span>surface-0 · canvas</span><code>--cds-surface-0</code></div>
+    <div class="surface s1"><span>surface-1 · sidebar</span><code>--cds-surface-1</code></div>
+    <div class="surface s2"><span>surface-2 · card</span><code>--cds-surface-2</code></div>
+    <div class="surface s3"><span>surface-3 · popover</span><code>--cds-surface-3</code></div>
+  </div>
+
+  <h3>Status</h3>
+  <div class="row">
+    <span class="pill pill-accent">Info</span>
+    <span class="pill pill-success">Success</span>
+    <span class="pill pill-warning">Warning</span>
+    <span class="pill pill-danger">Error</span>
+    <span class="pill pill-pro">Pro</span>
+  </div>
+
+  <h3>Input</h3>
+  <input class="input" placeholder="Focus me to see the three-layer ring">
+
+  <h3>Clay (brand) — a single pair, not a ramp</h3>
+  <div class="swatches" id="clay"></div>
+
+  <h3>Warm gray ramp · 35 steps</h3>
+  <div class="swatches" id="gray"></div>
+
+  <h3>Blue ramp · 35 steps</h3>
+  <div class="swatches" id="blue"></div>
+</div>
+
+<div class="panel cds-root" data-mode="system">
+  <h2>Motion</h2>
+  <p class="hint">Durations, easings and keyframes from <code>claude-motion.css</code>.</p>
+
+  <h3>Entrances</h3>
+  <div class="motion-stage">
+    <div class="motion-item"><span class="dot kf-reveal"></span><code>cds-reveal-in</code> · dur-base + ease-out</div>
+    <div class="motion-item"><span class="dot kf-morph"></span><code>cds-morph-in</code> · dur-base + ease-out</div>
+    <div class="motion-item"><span class="dot kf-chip"></span><code>cds-chip-in</code> · blur + scale</div>
+  </div>
+
+  <h3>Working indicators</h3>
+  <div class="motion-stage">
+    <div class="motion-item"><span class="dot kf-pulse"></span><code>cds-dot-pulse</code></div>
+    <div class="motion-item"><span class="dot kf-halo"></span><code>cds-working-dot-halo</code></div>
+  </div>
+
+  <h3>Skeleton</h3>
+  <div class="motion-stage">
+    <div class="skeleton"></div>
+    <div class="skeleton" style="width:70%"></div>
+    <div class="motion-item"><code>cds-skeleton-sweep</code> · 2s linear infinite</div>
+  </div>
+
+  <h3>Spring</h3>
+  <div class="motion-stage">
+    <div class="motion-item">
+      <button class="btn btn-secondary spring-demo">press &amp; hold</button>
+      <code>--cds-btn-spring</code>
+    </div>
+    <div class="motion-item">
+      <code>linear(0, .2459, .6526, .9468, 1.0764, 1.0915, …)</code>
+    </div>
+  </div>
+
+  <h3>Duration ladder</h3>
+  <div class="motion-stage">
+    <div class="motion-item"><code>--cds-dur-fast</code> · 60ms</div>
+    <div class="motion-item"><code>--cds-dur-snap</code> · 120ms</div>
+    <div class="motion-item"><code>--cds-dur-base</code> · 200ms</div>
+    <div class="motion-item"><code>--cds-dur-sheet</code> · 300ms</div>
+    <div class="motion-item"><code>--cds-dur-slow</code> · 450ms</div>
+  </div>
+</div>
+
+<script>
+  // Build the palette swatches from the tokens actually present in the sheet.
+  // The real ladder: 0-100 by 10, then 150-800 by 50, then 810-900 by 10.
+  const STEPS = [
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100,
+    150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800,
+    810, 820, 830, 840, 850, 860, 870, 880, 890, 900,
+  ];
+
+  function paintRamp(id, family) {
+    const host = document.getElementById(id);
+    for (const step of STEPS) {
+      const el = document.createElement('div');
+      el.className = 'sw';
+      el.dataset.step = step;
+      el.style.background = `var(--cds-${family}-${step}, transparent)`;
+      el.title = `--cds-${family}-${step}`;
+      host.appendChild(el);
+    }
+  }
+
+  // Clay is defined as exactly two tokens, so it gets its own two swatches.
+  function paintClay() {
+    const host = document.getElementById('clay');
+    for (const [name, label] of [
+      ['cds-clay-emphasized', 'fill'],
+      ['cds-clay', 'hover'],
+    ]) {
+      const el = document.createElement('div');
+      el.className = 'sw';
+      el.dataset.step = label;
+      el.style.background = `var(--${name})`;
+      el.title = `--${name}`;
+      host.appendChild(el);
+    }
+  }
+
+  paintClay();
+  paintRamp('gray', 'gray');
+  paintRamp('blue', 'blue');
+
+  // Theme switch
+  const root = document.querySelector('.cds-root');
+  const panels = document.querySelectorAll('.cds-root');
+  const buttons = document.querySelectorAll('.toolbar button');
+  buttons.forEach((b) => {
+    b.addEventListener('click', () => {
+      const mode = b.dataset.set;
+      panels.forEach((p) => p.setAttribute('data-mode', mode));
+      buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    });
+  });
+</script>
+
+</body>
+</html>

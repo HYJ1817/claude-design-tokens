@@ -1,0 +1,61 @@
+{
+  "name": "claude-design-tokens",
+  "version": "1.0.0",
+  "description": "Design tokens and motion values reverse-engineered from the Claude desktop app, as portable CSS and JSON.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "design-tokens",
+    "css-variables",
+    "claude",
+    "reverse-engineering",
+    "theme",
+    "dark-mode",
+    "keyframes",
+    "motion"
+  ],
+  "files": [
+    "dist/",
+    "data/",
+    "src/",
+    "scripts/",
+    "docs/",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./dist/claude-tokens.css",
+    "./css": "./dist/claude-tokens.css",
+    "./css/flat": "./dist/claude-tokens-flat.css",
+    "./css/motion": "./dist/claude-motion.css",
+    "./css/cq": "./dist/claude-tokens-cq.css",
+    "./css/legacy": "./dist/claude-tokens-legacy.css",
+    "./tokens.json": "./data/tokens.json",
+    "./roles.json": "./data/roles.json",
+    "./keyframes.json": "./data/keyframes.json",
+    "./report.json": "./data/report.json"
+  },
+  "scripts": {
+    "extract": "node scripts/extract.mjs",
+    "build": "node scripts/build.mjs",
+    "roles": "node scripts/roles.mjs",
+    "docs": "node scripts/docs.mjs",
+    "verify": "node test/verify.mjs",
+    "all": "npm run extract && npm run roles && npm run build && npm run docs && npm run verify"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HYJ1817/claude-design-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HYJ1817/claude-design-tokens/issues"
+  },
+  "homepage": "https://github.com/HYJ1817/claude-design-tokens#readme"
+}

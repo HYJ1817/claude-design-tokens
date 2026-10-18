@@ -1,0 +1,109 @@
+/*!
+ * Claude design tokens — legacy pre-Tailwind variables
+ *
+ * Extracted from Claude 2.42304.0 (@ant/desktop)
+ *   asar sha256: 8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db
+ *   extracted:   2026-10-18T07:51:24.198Z
+ *
+ * Generated file — do not edit. Run `npm run build` instead.
+ *
+ * These are design values reverse-engineered from a shipped application for
+ * interoperability and study. No Anthropic source code, font binaries or icon
+ * assets are included. See NOTICE.md.
+ */
+
+/* 89 tokens */
+
+@layer claude-tokens {
+  .cds-root {
+    --accent-000: 210 73.7% 40.2%;
+    --accent-100: 210 70.9% 51.6%;
+    --accent-200: 210 70.9% 51.6%;
+    --accent-900: 211 72% 90%;
+    --accent-brand: 15 63.1% 59.6%;
+    --accent-pro-000: 251 34.2% 33.3%;
+    --accent-pro-100: 251 40% 45.1%;
+    --accent-pro-200: 251 61% 72.2%;
+    --accent-pro-900: 253 33.3% 91.8%;
+    --animate-spin: spin 1s linear infinite;
+    --bg-000: 0 0% 100%;
+    --bg-100: 48 33.3% 97.1%;
+    --bg-200: 53 28.6% 94.5%;
+    --bg-300: 48 25% 92.2%;
+    --bg-400: 50 20.7% 88.6%;
+    --bg-500: 50 20.7% 88.6%;
+    --blur-md: 12px;
+    --border-100: 30 3.3% 11.8%;
+    --border-200: 30 3.3% 11.8%;
+    --border-300: 30 3.3% 11.8%;
+    --border-400: 30 3.3% 11.8%;
+    --brand-000: 15 54.2% 51.2%;
+    --brand-100: 15 54.2% 51.2%;
+    --brand-200: 15 63.1% 59.6%;
+    --brand-900: 0 0% 0%;
+    --btn-dot-r: calc(.1875rem * var(--cds-rem-scale,1));
+    --btn-dot-x: calc(var(--btn-dot-r) - 1px);
+    --clay: #d97757;
+    --clay-hover: #c86848;
+    --cmp-chin-touch-grow: calc((var(--cds-h-control) - var(--cmp-chin-row-h,var(--cds-h-control))) / 2);
+    --color-white: #fff;
+    --container-md: 28rem;
+    --cream: #f4f3ee;
+    --danger-000: 0 58.6% 34.1%;
+    --danger-100: 0 56.2% 45.4%;
+    --danger-200: 0 56.2% 45.4%;
+    --danger-900: 0 50% 95%;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --default-transition-duration: .15s;
+    --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    --ease-in: cubic-bezier(.4, 0, 1, 1);
+    --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+    --err: #b33a3a;
+    --font-anthropic-sans: "anthropic-sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", "Kohinoor Devanagari", "Kohinoor Bangla", "Kohinoor Telugu", "Tamil Sangam MN", "Kohinoor Gujarati", "Malayalam Sangam MN", "Nirmala UI", "Noto Sans Devanagari UI", "Noto Sans Devanagari", "Noto Sans Bengali UI", "Noto Sans Bengali", "Noto Sans Telugu UI", "Noto Sans Telugu", "Noto Sans Tamil UI", "Noto Sans Tamil", "Noto Sans Gujarati UI", "Noto Sans Gujarati", "Noto Sans Kannada UI", "Noto Sans Kannada", "Noto Sans Malayalam UI", "Noto Sans Malayalam", Thonburi, "Leelawadee UI", "Noto Sans Thai UI", "Noto Sans Thai", Kefa, Ebrima, "Noto Sans Ethiopic", "Abyssinica SIL", sans-serif;
+    --font-anthropic-serif: "anthropic-serif", ui-serif, Georgia, "Times New Roman", "Kohinoor Devanagari", "Kohinoor Bangla", "Kohinoor Telugu", "Tamil Sangam MN", "Kohinoor Gujarati", "Malayalam Sangam MN", "Nirmala UI", "Noto Sans Devanagari UI", "Noto Sans Devanagari", "Noto Sans Bengali UI", "Noto Sans Bengali", "Noto Sans Telugu UI", "Noto Sans Telugu", "Noto Sans Tamil UI", "Noto Sans Tamil", "Noto Sans Gujarati UI", "Noto Sans Gujarati", "Noto Sans Kannada UI", "Noto Sans Kannada", "Noto Sans Malayalam UI", "Noto Sans Malayalam", Thonburi, "Leelawadee UI", "Noto Sans Thai UI", "Noto Sans Thai", Kefa, Ebrima, "Noto Sans Ethiopic", "Abyssinica SIL", serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-sans: var(--font-anthropic-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --gap-md: var(--cds-gap-md);
+    --gap-xs: var(--cds-gap-xs);
+    --ink: #2d2d2d;
+    --ink-dim: #6b6862;
+    --leading-relaxed: 1.625;
+    --lightningcss-dark: initial;
+    --lightningcss-light: initial;
+    --line: #2d2d2d1a;
+    --ok: #2d7a3e;
+    --oncolor-100: 0 0% 100%;
+    --oncolor-200: 60 6.7% 97.1%;
+    --oncolor-300: 60 6.7% 97.1%;
+    --radius: var(--cds-radius);
+    --radius-card: calc(var(--cds-radius) + calc(.25rem * var(--cds-rem-scale,1)));
+    --radius-lg: .5rem;
+    --radius-md: .375rem;
+    --shadow-panel: inset 0 0 0 var(--cds-ring-inner) var(--cds-ring-color), 0 0 0 var(--cds-ring-outer) var(--cds-ring-color), var(--cds-shadow-popover);
+    --shadow-panel-lg: inset 0 0 0 var(--cds-ring-inner) var(--cds-ring-color), 0 0 0 var(--cds-ring-outer) var(--cds-ring-color), var(--cds-shadow-lg);
+    --shadow-popover: var(--cds-shadow-popover);
+    --spacing: .25rem;
+    --success-000: 125 100% 18%;
+    --success-100: 103 72.3% 26.9%;
+    --success-200: 103 72.3% 26.9%;
+    --success-900: 86 45.1% 90%;
+    --text-000: 60 2.6% 7.6%;
+    --text-100: 60 2.6% 7.6%;
+    --text-200: 60 2.5% 23.3%;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-300: 60 2.5% 23.3%;
+    --text-400: 51 3.1% 43.7%;
+    --text-500: 51 3.1% 43.7%;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
+    --tracking-wider: .05em;
+  }
+}

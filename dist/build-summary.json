@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-10-18T07:51:25.043Z",
+  "source": {
+    "version": "2.42304.0",
+    "asarSha256": "8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db"
+  },
+  "scope": ".cds-root",
+  "buckets": {
+    "cds": 955,
+    "cq": 18,
+    "legacy": 89,
+    "internal": 80
+  },
+  "themed": 183,
+  "motionVariables": 9,
+  "keyframes": 58,
+  "outputs": [
+    "claude-motion.css",
+    "claude-tokens-cq.css",
+    "claude-tokens-flat.css",
+    "claude-tokens-legacy.css",
+    "claude-tokens.css"
+  ]
+}

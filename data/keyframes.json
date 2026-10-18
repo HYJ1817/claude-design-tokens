@@ -1,0 +1,317 @@
+{
+  "meta": {
+    "product": "Claude",
+    "packageName": "@ant/desktop",
+    "version": "2.42304.0",
+    "asar": {
+      "path": "C:/Program Files/WindowsApps/Claude_2.42304.0.0_x64__pzs8sxrjxfjjc/app/resources/app.asar",
+      "sha256": "8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db",
+      "sizeBytes": 49338428
+    },
+    "extractedAt": "2026-10-18T07:51:24.198Z",
+    "extractor": "claude-design-tokens@1",
+    "counts": {
+      "files": 506,
+      "cssFiles": 16,
+      "cssBytes": 339374,
+      "variables": 1142,
+      "keyframes": 58,
+      "fontFaces": 21,
+      "conflicts": 0,
+      "progressiveEnhancement": 66,
+      "unresolvedRefs": 8
+    }
+  },
+  "keyframes": {
+    "cds-attachment-out": {
+      "body": "to{opacity:0;transform:scale(.5)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-chip-in": {
+      "body": "0%{opacity:0;filter:blur(2px);transform:scale(.8)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-dot-pulse": {
+      "body": "0%,5%{opacity:.2857;animation-timing-function:cubic-bezier(.165,.84,.44,1)}15%,25%{opacity:1;animation-timing-function:cubic-bezier(.165,.84,.44,1)}65%,to{opacity:.2857}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-drop-icon-rise": {
+      "body": "0%{opacity:0;transform:translateY(12px)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-drop-ring-in": {
+      "body": "0%{opacity:0;transform:scale(1.005)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-editor-comment-working": {
+      "body": "50%{background-color:var(--cds-bg-editor-comment-active)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-fade-in": {
+      "body": "0%{opacity:0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-flipbook": {
+      "body": "0%{transform:translate(0)}to{transform:translateX(var(--cds-flipbook-span))}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-grid-rows-in": {
+      "body": "0%{grid-template-rows:0fr}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-morph-in": {
+      "body": "0%{opacity:0;transform:translateY(3px)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-page-tabs-arrive": {
+      "body": "0%{translate:var(--cds-page-header-tabs-pull);animation-timing-function:cubic-bezier(.45,0,.55,1)}.005%,to{translate:0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-page-title-leaves": {
+      "body": "0%{opacity:1;transform:none}.001%,to{opacity:0;transform:translateY(20px)scale(.96)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-dip-down": {
+      "body": "to{transform:scale(.82)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-dip-up": {
+      "body": "0%{transform:scale(.82)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-in": {
+      "body": "0%{transform:scale(.8)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-out": {
+      "body": "0%{opacity:1;transform:none}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-pop-down": {
+      "body": "0%{transform:scale(1.32)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-pop-up": {
+      "body": "to{transform:scale(1.32)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-roll-in-down": {
+      "body": "0%{opacity:0;transform:translateY(-70%)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-roll-in-up": {
+      "body": "0%{opacity:0;transform:translateY(70%)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-pill-roll-out": {
+      "body": "0%{opacity:1;transform:none}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-placeholder-reveal": {
+      "body": "0%{opacity:0}to{opacity:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-resolve-glyph": {
+      "body": "0%,74.9%{color:inherit}75%,to{color:var(--cds-on-accent)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-resolve-square": {
+      "body": "0%{stroke-dashoffset:52px;fill-opacity:0}50%{stroke-dashoffset:0;fill-opacity:0}to{stroke-dashoffset:0;fill-opacity:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-reveal-in": {
+      "body": "0%{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-reveal-out": {
+      "body": "0%{opacity:1;transform:none}to{opacity:0;transform:translateY(4px)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-bottom": {
+      "body": "0%{--cds-scroll-fade-bottom-raw:var(--cds-scroll-fade-size)}to{--cds-scroll-fade-bottom-raw:0px}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-left": {
+      "body": "0%{--cds-scroll-fade-left-raw:0px}to{--cds-scroll-fade-left-raw:var(--cds-scroll-fade-size)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-right": {
+      "body": "0%{--cds-scroll-fade-right-raw:var(--cds-scroll-fade-size)}to{--cds-scroll-fade-right-raw:0px}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-strip-active": {
+      "body": "0%,to{--cds-scroll-fade-strip-active:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-strip-in": {
+      "body": "0%{--cds-scroll-fade-strip-raw:0}to{--cds-scroll-fade-strip-raw:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-strip-out": {
+      "body": "0%{--cds-scroll-fade-strip-raw:1}to{--cds-scroll-fade-strip-raw:0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-top": {
+      "body": "0%{--cds-scroll-fade-top-raw:0px}to{--cds-scroll-fade-top-raw:var(--cds-scroll-fade-size)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-x-active": {
+      "body": "0%,to{--cds-scroll-fade-x-active:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-scroll-fade-y-active": {
+      "body": "0%,to{--cds-scroll-fade-y-active:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer": {
+      "body": "0%{transform:translate(-100%)}to{transform:translate(100%)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-band": {
+      "body": "0%,15%{animation-timing-function:cubic-bezier(.714,.121,.211,.888);translate:-62.5%}85%,to{translate:-12.5%}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-band-rtl": {
+      "body": "0%,15%{animation-timing-function:cubic-bezier(.714,.121,.211,.888);translate:-12.5%}85%,to{translate:-62.5%}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-band-strong": {
+      "body": "0%,5%{animation-timing-function:cubic-bezier(.4,.15,.6,.85);translate:-62.5%}95%,to{translate:-12.5%}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-band-strong-rtl": {
+      "body": "0%,5%{animation-timing-function:cubic-bezier(.4,.15,.6,.85);translate:-12.5%}95%,to{translate:-62.5%}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-shine": {
+      "body": "0%,15%{background-position:83.333% 0;animation-timing-function:cubic-bezier(.714,.121,.211,.888)}85%,to{background-position:16.667% 0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-shine-rtl": {
+      "body": "0%,15%{background-position:16.667% 0;animation-timing-function:cubic-bezier(.714,.121,.211,.888)}85%,to{background-position:83.333% 0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-shine-strong": {
+      "body": "0%,5%{background-position:83.333% 0;animation-timing-function:cubic-bezier(.4,.15,.6,.85)}95%,to{background-position:16.667% 0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-shimmer-text-shine-strong-rtl": {
+      "body": "0%,5%{background-position:16.667% 0;animation-timing-function:cubic-bezier(.4,.15,.6,.85)}95%,to{background-position:83.333% 0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-skeleton-breathe": {
+      "body": "0%,to{opacity:1}50%{opacity:.6}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-skeleton-sweep": {
+      "body": "0%{transform:translate(-100%)}to{transform:translate(100%)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-slide-in-end": {
+      "body": "0%{opacity:0;transform:translate(12px)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-slide-in-start": {
+      "body": "0%{opacity:0;transform:translate(-12px)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-sticky-edge-active": {
+      "body": "0%,to{--cds-sticky-edge-active:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-sticky-edge-end": {
+      "body": "0%{--cds-sticky-edge-end:1}to{--cds-sticky-edge-end:0}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-sticky-edge-start": {
+      "body": "0%{--cds-sticky-edge-start:0}to{--cds-sticky-edge-start:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-working-dot-halo": {
+      "body": "50%{opacity:.3;transform:scale(1.5)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-working-dot-lands": {
+      "body": "0%{clip-path:circle(calc(.25rem * var(--cds-rem-scale,1)))}to{clip-path:circle(50%)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cds-working-dot-veil": {
+      "body": "0%{opacity:1}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    },
+    "cq-fadeIn": {
+      "body": "0%{opacity:0}",
+      "at": "@media (prefers-reduced-motion:reduce)",
+      "file": ".vite/renderer/main_window/assets/clawdQuestEngine-C2Z1JudX.css"
+    },
+    "cq-slipIn": {
+      "body": "0%{opacity:0;transform:translateY(12px)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/clawdQuestEngine-C2Z1JudX.css"
+    },
+    "shimmer": {
+      "body": "to{transform:translateX(100%)}",
+      "at": null,
+      "file": "resources/artifact-libs/npm_gridjs@5.0.2_dist_theme_mermaid.min.css"
+    },
+    "spin": {
+      "body": "to{transform:rotate(360deg)}",
+      "at": null,
+      "file": ".vite/renderer/main_window/assets/MainWindowPage-DTxMhyWF.css"
+    }
+  }
+}

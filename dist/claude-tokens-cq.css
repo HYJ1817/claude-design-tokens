@@ -1,0 +1,38 @@
+/*!
+ * Claude design tokens — cq — self-contained widget subsystem
+ *
+ * Extracted from Claude 2.42304.0 (@ant/desktop)
+ *   asar sha256: 8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db
+ *   extracted:   2026-10-18T07:51:24.198Z
+ *
+ * Generated file — do not edit. Run `npm run build` instead.
+ *
+ * These are design values reverse-engineered from a shipped application for
+ * interoperability and study. No Anthropic source code, font binaries or icon
+ * assets are included. See NOTICE.md.
+ */
+
+/* 18 tokens */
+
+@layer claude-tokens {
+  .cds-root .cq-root {
+    --cq-bg: #faf9f5;
+    --cq-bg-rgb: 250,249,245;
+    --cq-btn: #f1eee6;
+    --cq-btn-active: #e5e1d7;
+    --cq-chip: #ffffffe6;
+    --cq-font-mono: anthropic-mono, "SF Mono", ui-monospace, Menlo, monospace;
+    --cq-font-sans: anthropic-sans, system-ui, sans-serif;
+    --cq-font-serif: anthropic-serif, Georgia, serif;
+    --cq-ink: #2b2a27;
+    --cq-ink-faint: #9e9a90;
+    --cq-ink-soft: #6f6c64;
+    --cq-line: #dfdbd1;
+    --cq-line-2: #d6d2c7;
+    --cq-line-3: #b7b3a8;
+    --cq-panel: #fffffff7;
+    --cq-shadow: #3c321e1f;
+    --cq-slip-shadow: #3c321e47;
+    --cq-top-inset: 0px;
+  }
+}
