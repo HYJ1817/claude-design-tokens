@@ -251,8 +251,14 @@ which build a given dump came from.
 | Variables | 1,142 |
 | `@keyframes` | 58 |
 
-See [`docs/TOKENS.md`](docs/TOKENS.md) for the full role table and
-[`docs/MOTION.md`](docs/MOTION.md) for the animation system.
+## Documentation
+
+| Doc | Contents |
+|---|---|
+| [`docs/TOKENS.md`](docs/TOKENS.md) | Every variable, semantic roles, full palettes |
+| [`docs/MOTION.md`](docs/MOTION.md) | Durations, easings, springs, all 58 keyframes |
+| [`docs/TYPOGRAPHY.md`](docs/TYPOGRAPHY.md) | Type scale, density ladders, dark-weight correction |
+| [`docs/ICON-ANIMATION.md`](docs/ICON-ANIMATION.md) | How the icon font animates glyphs with a custom variation axis — with a runnable synthetic demo |
 
 ## Licence
 

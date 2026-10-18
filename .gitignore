@@ -1,5 +1,12 @@
 node_modules/
 test/.verify.html
+test/.probe.html
+
+# Never commit third-party font binaries or extracted artwork.
+*.woff2
+*.woff
+data/.icons.woff2
+
 *.log
 .DS_Store
 Thumbs.db

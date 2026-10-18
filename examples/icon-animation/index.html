@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variable-font icon animation — mechanism demo</title>
+<style>
+  @font-face {
+    font-family: 'DemoAnim';
+    src: url('demo-anim.ttf') format('truetype');
+    font-weight: 100 900;
+  }
+
+  :root {
+    --ink: #1a1a19;
+    --muted: #6d6b67;
+    --line: #e1e0d9;
+    --bg: #f6f6f4;
+    --card: #fff;
+    --clay: #c6613f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 32px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  h1 { font-size: 20px; font-weight: 580; margin: 0 0 6px; }
+  h2 { font-size: 13px; font-weight: 500; text-transform: uppercase;
+       letter-spacing: .05em; color: var(--muted); margin: 32px 0 12px; }
+  p.lede { color: var(--muted); margin: 0 0 8px; max-width: 70ch; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .92em;
+         background: #00000008; padding: 1px 5px; border-radius: 4px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .cell {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 12px 12px;
+    text-align: center;
+  }
+
+  .icon {
+    font-family: 'DemoAnim';
+    font-size: 56px;
+    line-height: 1;
+    color: var(--clay);
+    font-variation-settings: 'ANIM' 0;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .cell.pulse .icon { animation: pulse 1.6s ease-in-out infinite; }
+  .cell.morph .icon { animation: morph 1.6s ease-in-out infinite alternate; }
+
+  @keyframes pulse {
+    0%, 100% { font-variation-settings: 'ANIM' 0; }
+    50%      { font-variation-settings: 'ANIM' 100; }
+  }
+
+  @keyframes morph {
+    0%   { font-variation-settings: 'ANIM' 0; }
+    100% { font-variation-settings: 'ANIM' 100; }
+  }
+
+  .name { font-size: 11px; color: var(--muted);
+          font-family: ui-monospace, Menlo, monospace; }
+
+  .manual {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+  }
+  .manual .cell { border: none; padding: 0; }
+  .manual .icon { font-size: 44px; animation: none !important; }
+  .manual .lbl { font-size: 10px; color: var(--muted);
+                 font-family: ui-monospace, Menlo, monospace; }
+
+  .controls { display: flex; gap: 16px; align-items: center; margin: 16px 0 0;
+              flex-wrap: wrap; }
+  .controls label { font-size: 12px; color: var(--muted); }
+  input[type=range] { width: 240px; accent-color: var(--clay); }
+
+  button {
+    font: inherit; font-size: 12px;
+    padding: 6px 14px; border-radius: 7px; cursor: pointer;
+    border: 1px solid var(--line); background: #fff; color: var(--ink);
+  }
+  button:hover { background: #f0efec; }
+  button[aria-pressed="true"] { background: var(--clay); color: #fff;
+                                border-color: var(--clay); }
+
+  .note {
+    margin-top: 32px; padding: 14px 16px;
+    background: #fff; border: 1px solid var(--line);
+    border-left: 3px solid var(--clay);
+    border-radius: 8px; font-size: 13px; color: var(--muted); max-width: 78ch;
+  }
+  .note strong { color: var(--ink); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<h1>Variable-font icon animation</h1>
+<p class="lede">
+  Each icon below is a single glyph. Its shape is driven by a custom
+  <code>ANIM</code> axis from <code>0</code> to <code>100</code> — no SVG morphing,
+  no sprite sheets, no JavaScript. The font in this folder is synthetic; the
+  mechanism is what matters.
+</p>
+
+<h2>Driven by CSS animation</h2>
+<div class="grid">
+  <div class="cell pulse">
+    <span class="icon">&#xE003;</span>
+    <div class="name">uniE003 · pulse</div>
+  </div>
+  <div class="cell morph">
+    <span class="icon">&#xE000;</span>
+    <div class="name">uniE000 · travel</div>
+  </div>
+  <div class="cell morph">
+    <span class="icon">&#xE001;</span>
+    <div class="name">uniE001 · bars</div>
+  </div>
+  <div class="cell morph">
+    <span class="icon">&#xE002;</span>
+    <div class="name">uniE002 · rotate</div>
+  </div>
+  <div class="cell morph">
+    <span class="icon">&#xE004;</span>
+    <div class="name">uniE004 · grow</div>
+  </div>
+</div>
+
+<h2>Scrubbed by hand</h2>
+<div class="manual" id="manual"></div>
+<div class="controls">
+  <label>ANIM <input type="range" id="anim" min="0" max="100" value="0"></label>
+  <span id="val" class="name">0</span>
+  <button id="play" aria-pressed="false">auto-play</button>
+</div>
+
+<div class="note">
+  <strong>Why two archetypes?</strong>
+  A glyph whose <code>ANIM=0</code> and <code>ANIM=100</code> outlines differ is a
+  <em>morph</em>: driving 0→100 walks it to the other shape. A glyph that returns
+  to its start at 100 is a <em>pulse</em>: its variation regions peak in the middle
+  of the axis, so 0→100 bulges and comes back. Both use the same axis; only the
+  region geometry differs.
+</div>
+
+<script>
+  const GLYPHS = [
+    ['uniE003', 0xE003], ['uniE000', 0xE000], ['uniE001', 0xE001],
+    ['uniE002', 0xE002], ['uniE004', 0xE004],
+  ];
+
+  const manual = document.getElementById('manual');
+  const icons = [];
+  for (const [name, cp] of GLYPHS) {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    const icon = document.createElement('span');
+    icon.className = 'icon';
+    icon.textContent = String.fromCodePoint(cp);
+    const lbl = document.createElement('div');
+    lbl.className = 'lbl';
+    lbl.textContent = name;
+    cell.append(icon, lbl);
+    manual.append(cell);
+    icons.push(icon);
+  }
+
+  const slider = document.getElementById('anim');
+  const val = document.getElementById('val');
+  const play = document.getElementById('play');
+
+  const apply = (v) => {
+    for (const el of icons) el.style.fontVariationSettings = "'ANIM' " + v;
+    val.textContent = v;
+  };
+
+  slider.addEventListener('input', () => {
+    play.setAttribute('aria-pressed', 'false');
+    apply(slider.value);
+  });
+
+  let raf = null;
+  let t0 = 0;
+  const step = (t) => {
+    if (!t0) t0 = t;
+    const phase = ((t - t0) % 1600) / 1600;
+    const v = Math.round(phase < 0.5 ? phase * 200 : (1 - phase) * 200);
+    slider.value = v;
+    apply(v);
+    raf = requestAnimationFrame(step);
+  };
+
+  play.addEventListener('click', () => {
+    const on = play.getAttribute('aria-pressed') !== 'true';
+    play.setAttribute('aria-pressed', String(on));
+    if (on) { t0 = 0; raf = requestAnimationFrame(step); }
+    else { cancelAnimationFrame(raf); raf = null; }
+  });
+
+  apply(0);
+</script>
+
+</body>
+</html>

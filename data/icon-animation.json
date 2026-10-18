@@ -1,0 +1,791 @@
+{
+  "meta": {
+    "source": {
+      "product": "Claude",
+      "packageName": "@ant/desktop",
+      "version": "2.42304.0",
+      "asar": {
+        "path": "C:/Program Files/WindowsApps/Claude_2.42304.0.0_x64__pzs8sxrjxfjjc/app/resources/app.asar",
+        "sha256": "8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db",
+        "sizeBytes": 49338428
+      },
+      "extractedAt": "2026-10-15T14:33:31.257Z",
+      "extractor": "claude-design-tokens@1",
+      "counts": {
+        "files": 506,
+        "cssFiles": 16,
+        "cssBytes": 339374,
+        "variables": 1142,
+        "keyframes": 58,
+        "fontFaces": 21,
+        "conflicts": 0,
+        "progressiveEnhancement": 66,
+        "unresolvedRefs": 8
+      }
+    },
+    "generatedAt": "2026-10-15T14:33:31.257Z",
+    "note": "Mechanism data only. No outlines, no font binaries. Archetype is classified by sampling the MIDDLE of the animation axis: a pulse returns to its rest outline at 100 and would look static at the ends."
+  },
+  "axes": [
+    {
+      "tag": "wght",
+      "min": 400,
+      "default": 400,
+      "max": 700,
+      "name": "Weight"
+    },
+    {
+      "tag": "opsz",
+      "min": 12,
+      "default": 20,
+      "max": 32,
+      "name": "Optical Size"
+    },
+    {
+      "tag": "ANIM",
+      "min": 0,
+      "default": 0,
+      "max": 100,
+      "name": "Animation"
+    },
+    {
+      "tag": "ANM2",
+      "min": 0,
+      "default": 0,
+      "max": 100,
+      "name": "Animation loop"
+    }
+  ],
+  "coverage": {
+    "glyphs": 869,
+    "cmapEntries": 395,
+    "animated": 24,
+    "mapped": 12,
+    "unmapped": 12,
+    "archetypes": {
+      "morph": 22,
+      "pulse": 2
+    }
+  },
+  "privateUseRange": [
+    "U+E000",
+    "U+E18C"
+  ],
+  "animated": [
+    {
+      "glyph": "uniE017",
+      "codepoint": "U+E017",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 67,
+      "displacementAt100": 134,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 100
+    },
+    {
+      "glyph": "uniE02F",
+      "codepoint": "U+E02F",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 45.5,
+      "displacementAt100": 91,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 86
+    },
+    {
+      "glyph": "uniE039",
+      "codepoint": "U+E039",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 30,
+      "displacementAt100": 60,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 95
+    },
+    {
+      "glyph": "uniE043",
+      "codepoint": "U+E043",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 82.5,
+      "displacementAt100": 165,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 76
+    },
+    {
+      "glyph": "uniE048",
+      "codepoint": "U+E048",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "ANM2",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 163,
+      "displacementAt100": 327,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "axis": "ANM2",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "axis": "ANM2",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 52
+    },
+    {
+      "glyph": "uniE063",
+      "codepoint": "U+E063",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 25,
+      "displacementAt100": 50,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 61
+    },
+    {
+      "glyph": "uniE097",
+      "codepoint": "U+E097",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 13,
+      "displacementAt100": 26,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 112
+    },
+    {
+      "glyph": "uniE0B8",
+      "codepoint": "U+E0B8",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "pulse",
+      "displacementAt50": 53,
+      "displacementAt100": 0,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            0.163,
+            0.837
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.163,
+            0.837,
+            1
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.093,
+            0.256,
+            0.744
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.256,
+            0.744,
+            0.907
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.186,
+            0.349,
+            0.651
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.349,
+            0.651,
+            0.814
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.279,
+            0.442,
+            0.558
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.442,
+            0.558,
+            0.721
+          ]
+        }
+      ],
+      "pointCount": 198
+    },
+    {
+      "glyph": "uniE0C9",
+      "codepoint": "U+E0C9",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 44.5,
+      "displacementAt100": 89,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 62
+    },
+    {
+      "glyph": "uniE0E0",
+      "codepoint": "U+E0E0",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 28.5,
+      "displacementAt100": 57,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 98
+    },
+    {
+      "glyph": "uniE0F1",
+      "codepoint": "U+E0F1",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "opsz",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 25,
+      "displacementAt100": 50,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 109
+    },
+    {
+      "glyph": "uniE100",
+      "codepoint": "U+E100",
+      "mapped": true,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 39,
+      "displacementAt100": 78,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 90
+    },
+    {
+      "glyph": "glyph00156",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 69,
+      "displacementAt100": 138,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 104
+    },
+    {
+      "glyph": "glyph00202",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 42,
+      "displacementAt100": 84,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 61
+    },
+    {
+      "glyph": "glyph00222",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 30,
+      "displacementAt100": 60,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 96
+    },
+    {
+      "glyph": "glyph00238",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 65.5,
+      "displacementAt100": 131,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 76
+    },
+    {
+      "glyph": "glyph00244",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "ANM2",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 151.2,
+      "displacementAt100": 305,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "axis": "ANM2",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "axis": "ANM2",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 52
+    },
+    {
+      "glyph": "glyph00296",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 25,
+      "displacementAt100": 50,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 61
+    },
+    {
+      "glyph": "glyph00398",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 12.5,
+      "displacementAt100": 25,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 134
+    },
+    {
+      "glyph": "glyph00461",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "pulse",
+      "displacementAt50": 65,
+      "displacementAt100": 0,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            0.163,
+            0.837
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.163,
+            0.837,
+            1
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.093,
+            0.256,
+            0.744
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.256,
+            0.744,
+            0.907
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.186,
+            0.349,
+            0.651
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.349,
+            0.651,
+            0.814
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.279,
+            0.442,
+            0.558
+          ]
+        },
+        {
+          "axis": "ANIM",
+          "support": [
+            0.442,
+            0.558,
+            0.721
+          ]
+        }
+      ],
+      "pointCount": 205
+    },
+    {
+      "glyph": "glyph00493",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 45.5,
+      "displacementAt100": 91,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 47
+    },
+    {
+      "glyph": "glyph00534",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 29,
+      "displacementAt100": 58,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 89
+    },
+    {
+      "glyph": "glyph00568",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 25,
+      "displacementAt100": 50,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 83
+    },
+    {
+      "glyph": "glyph00598",
+      "codepoint": null,
+      "mapped": false,
+      "axes": [
+        "ANIM",
+        "wght"
+      ],
+      "archetype": "morph",
+      "displacementAt50": 35.5,
+      "displacementAt100": 71,
+      "regions": [
+        {
+          "axis": "ANIM",
+          "support": [
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "pointCount": 60
+    }
+  ]
+}

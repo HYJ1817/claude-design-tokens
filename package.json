@@ -35,7 +35,8 @@
     "./roles.json": "./data/roles.json",
     "./keyframes.json": "./data/keyframes.json",
     "./report.json": "./data/report.json",
-    "./typography.json": "./data/typography.json"
+    "./typography.json": "./data/typography.json",
+    "./icon-animation.json": "./data/icon-animation.json"
   },
   "scripts": {
     "extract": "node scripts/extract.mjs",
@@ -43,8 +44,9 @@
     "roles": "node scripts/roles.mjs",
     "docs": "node scripts/docs.mjs",
     "verify": "node test/verify.mjs",
-    "all": "npm run extract && npm run roles && npm run typography && npm run build && npm run docs && npm run verify",
-    "typography": "node scripts/typography.mjs"
+    "all": "npm run extract && npm run roles && npm run typography && npm run icons && npm run build && npm run docs && npm run verify",
+    "typography": "node scripts/typography.mjs",
+    "icons": "node scripts/icons.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.0"
