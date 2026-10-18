@@ -38,6 +38,32 @@ const report = JSON.parse(fs.readFileSync(path.join(dataDir, 'report.json'), 'ut
 const meta = tokens.meta;
 
 /* ------------------------------------------------------------------ */
+/* host-provided variables                                             */
+/* ------------------------------------------------------------------ */
+
+/**
+ * The app references these but never defines them: they are injected at runtime
+ * or expected from the host. Shipping them with sane defaults turns the token
+ * set from "96% works" into "works out of the box".
+ */
+const REQUIRED_SUBSTITUTES = [
+  ['cds-rem-scale', '1', 'referenced 110x; rem multiplier for the whole scale'],
+  ['placeholder-reveal-delay', '.5s', 'skeleton reveal delay, injected at runtime'],
+  ['cmp-chin-row-h', '2rem', 'composer chin row height'],
+  ['cds-font-mono-override', 'initial', 'mono override hook; empty so the fallback chain applies'],
+  // The app ships Anthropic Serif/Sans as binaries we cannot redistribute. These
+  // aliases give every consumer a working stack instead of an empty value.
+  // The original stacks already end in a full fallback chain, so these only need
+  // to occupy the *first* slot. Repeating the chain here would duplicate it.
+  ['font-anthropic-serif', 'ui-serif',
+   'first-slot substitute for the non-redistributable Anthropic Serif'],
+  ['font-anthropic-mono', '"SF Mono"',
+   'first-slot substitute for the non-redistributable Anthropic Mono'],
+  ['font-anthropic-sans-display', 'ui-sans-serif',
+   'first-slot substitute for the non-redistributable Anthropic Sans Display'],
+];
+
+/* ------------------------------------------------------------------ */
 /* grouping                                                            */
 /* ------------------------------------------------------------------ */
 
@@ -129,6 +155,11 @@ const staticTokens = buckets.cds.filter((t) => !themed(t));
 
   // base / light
   L.push(`  ${SCOPE} {`);
+  // `--cds-rem-scale` is referenced 110 times but never defined by the app; it
+  // is injected at runtime. Without it every `calc(Nrem * var(--cds-rem-scale,1))`
+  // is invalid and the whole type/density scale falls back to inherited values.
+  L.push(...REQUIRED_SUBSTITUTES.map(([k, v, note]) => `  --${k}: ${v}; /* ${note} */`));
+  L.push('');
   L.push(...decls(staticTokens, 'base'));
   L.push('');
   L.push(...decls(themedTokens, 'base'));
@@ -215,6 +246,7 @@ const staticTokens = buckets.cds.filter((t) => !themed(t));
   L.push('');
   L.push(`@layer claude-tokens {`);
   L.push(`  ${SCOPE} {`);
+  L.push(...REQUIRED_SUBSTITUTES.map(([k, v, note]) => `    --${k}: ${v}; /* ${note} */`));
   for (const t of buckets.cds) {
     const value = t.resolved.light ?? t.resolved.base ?? t.resolved.dark;
     if (value == null) continue;

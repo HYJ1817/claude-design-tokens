@@ -16,6 +16,13 @@
 
 @layer claude-tokens {
   .cds-root {
+    --cds-rem-scale: 1; /* referenced 110x; rem multiplier for the whole scale */
+    --placeholder-reveal-delay: .5s; /* skeleton reveal delay, injected at runtime */
+    --cmp-chin-row-h: 2rem; /* composer chin row height */
+    --cds-font-mono-override: initial; /* mono override hook; empty so the fallback chain applies */
+    --font-anthropic-serif: ui-serif; /* first-slot substitute for the non-redistributable Anthropic Serif */
+    --font-anthropic-mono: "SF Mono"; /* first-slot substitute for the non-redistributable Anthropic Mono */
+    --font-anthropic-sans-display: ui-sans-serif; /* first-slot substitute for the non-redistributable Anthropic Sans Display */
     --cds-alpha-0: hsl(from var(--cds-neutral-900) h s l / 0%);
     --cds-alpha-1: hsl(from var(--cds-neutral-900) h s l / 5%);
     --cds-alpha-2: hsl(from var(--cds-neutral-900) h s l / 10%);

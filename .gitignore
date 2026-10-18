@@ -1,6 +1,7 @@
 node_modules/
 test/.verify.html
 test/.probe.html
+test/.practical.html
 
 # Never commit third-party font binaries or extracted artwork.
 *.woff2

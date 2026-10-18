@@ -180,39 +180,87 @@ subtree:
 </div>
 ```
 
-## Tokens that are NOT self-contained
+## What is substituted, and why
 
-Eight variables are referenced but never defined by the app — they are injected
-at runtime or expected from the host. You must supply them or accept the
-fallback:
+Eight variables are referenced but never defined by the app — they are injected at
+runtime or expected from the host. The generated CSS ships sane defaults for them,
+so you do **not** have to supply anything:
 
-| Variable | Refs | What to do |
+| Variable | Refs | Shipped default |
 |---|---|---|
-| `--cds-rem-scale` | 110 | Set to `1`; it is the rem multiplier for density scaling |
-| `--cds-font-mono-override` | 2 | Leave unset; the fallback chain handles it |
-| `--font-anthropic-mono` | 2 | Anthropic's mono face, not redistributable — substitute your own |
-| `--font-anthropic-sans-display` | 1 | Same; only used for display headings |
-| `--placeholder-reveal-delay` | 1 | Defaults to `.5s` |
-| `--cmp-chin-row-h` | 1 | Component row height; set per layout |
-| `--_prose-leading` | 2 | Internal Sass intermediate; safe to ignore |
-| `--tw-empty` | 3 | Tailwind v4 internal; safe to ignore |
+| `--cds-rem-scale` | 110 | `1` — without it every `calc(Nrem * …)` is invalid and the whole type scale collapses |
+| `--placeholder-reveal-delay` | 1 | `.5s` |
+| `--cmp-chin-row-h` | 1 | `2rem` |
+| `--cds-font-mono-override` | 2 | `initial` (empty, so the fallback chain applies) |
+| `--font-anthropic-serif` | — | `ui-serif` (first slot only) |
+| `--font-anthropic-mono` | 2 | `"SF Mono"` (first slot only) |
+| `--font-anthropic-sans-display` | 1 | `ui-sans-serif` (first slot only) |
+| `--_prose-leading`, `--tw-empty` | 5 | internal; ignored |
 
-## Fonts
+The `--font-anthropic-*` entries only fill the **first slot** of the stack. The
+original definitions already end in a complete fallback chain, so the substitute
+just needs to stop the leading name from being undefined — you still get
+`ui-serif, Georgia, "Times New Roman", serif` and friends.
 
-`--cds-font-sans` resolves to a plain system stack — no webfont required:
+## Using it in a project
 
+The tokens are just custom properties; you still apply them. A typical scope
+element:
+
+```css
+.cds-root {
+  font-family: var(--cds-font-sans);
+  font-size: var(--cds-font-size-body);
+  line-height: var(--cds-leading-body);
+  color: var(--cds-text-primary);
+  background: var(--cds-page-bg);
+}
 ```
-ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-"PingFang SC", "PingFang TC", "Hiragino Sans", … sans-serif
-```
 
-The CJK fallbacks are already in the chain, so it renders acceptably for
-Chinese, Japanese, and Korean out of the box.
+That yields `15px / 22px` body text, which is Claude's actual setting — not the
+browser's 16px default.
 
-Anthropic ships `anthropic-sans` / `anthropic-serif` as separate binaries. They
-are **not** included here and are not redistributable. The token definitions
-reference them by name only, so if you happen to have them installed they are
-picked up; otherwise the system stack takes over.
+## What you cannot reproduce
+
+Two things are deliberately absent because they are Anthropic's assets, not
+measurements. Both have good substitutes:
+
+### Fonts
+
+`--cds-font-sans` resolves to a plain system stack with CJK fallbacks built in, so
+body text is fine. The distinctive faces are not included:
+
+| Token | Ships as | Substitute |
+|---|---|---|
+| `--cds-font-sans` | system stack + CJK | already good; no action |
+| `--cds-font-voice` | `ui-serif, Georgia, …` | a serif with similar warmth — Source Serif 4, Newsreader, or Spectral |
+| `--cds-font-mono` | `"SF Mono", ui-monospace, …` | JetBrains Mono, IBM Plex Mono, or Geist Mono |
+
+Anthropic's typefaces are variable fonts with a `grad` axis, which is why the dark
+mode weight correction works. If you substitute a static font, the `-40` wght
+nudge has nowhere to go; either accept slightly heavier dark text or pick a
+variable font and map `grad` yourself.
+
+### Icons
+
+The icon font is entirely absent — **there is no icon set in this repo.** Every
+icon must come from elsewhere. The relevant tokens still apply:
+
+| Token | Use |
+|---|---|
+| `--cds-icon` | icon box size (follows the density ladder) |
+| `--cds-opacity-icon-secondary` | de-emphasis for a two-tone secondary layer |
+| `--cds-text-secondary` | default icon colour |
+
+Lucide and Phosphor are the closest in weight and corner treatment. Set
+`stroke-width` to roughly `1.5` at 16px to match Claude's optical weight.
+
+### The 4% that will not resolve
+
+Of 281 `var()` references in the generated CSS, 271 resolve. The remaining 10 are
+internal component hooks (`--cds-font-wght-body`, `--cds-font-axis-wght-header`,
+`--cds-text-stays-secondary`, …) used by specific widgets. They do not affect
+colour, spacing, radius, shadow, motion, or theming.
 
 ## What is not here
 
