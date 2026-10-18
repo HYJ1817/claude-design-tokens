@@ -8,7 +8,7 @@
       "sha256": "8f4d3dec5e4f3ddffb150321060b18807d83a40f3a65618fe4f29325379da9db",
       "sizeBytes": 49338428
     },
-    "extractedAt": "2026-10-18T07:51:24.198Z",
+    "extractedAt": "2026-10-15T14:33:31.257Z",
     "extractor": "claude-design-tokens@1",
     "counts": {
       "files": 506,

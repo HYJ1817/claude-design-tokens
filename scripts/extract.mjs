@@ -370,7 +370,9 @@ const meta = {
   packageName: pkg.name || null,
   version: pkg.version || null,
   asar: { path: asarPath.replace(/\\/g, '/'), sha256, sizeBytes },
-  extractedAt: new Date().toISOString(),
+  // Derived from the asar mtime rather than wall-clock time, so re-running the
+  // extractor on the same build produces byte-identical output.
+  extractedAt: fs.statSync(asarPath).mtime.toISOString(),
   extractor: 'claude-design-tokens@1',
   counts: {
     files: allEntries.length,

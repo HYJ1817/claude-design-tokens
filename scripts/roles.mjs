@@ -160,7 +160,7 @@ const out = {
   meta: {
     source: tokens.meta,
     theme: THEME,
-    generatedAt: new Date().toISOString(),
+    generatedAt: tokens.meta.extractedAt,
   },
   groups: {},
 };

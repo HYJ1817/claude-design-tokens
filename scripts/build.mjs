@@ -258,7 +258,7 @@ for (const [bucketName, label, scope] of [
 /* ------------------------------------------------------------------ */
 
 const summary = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: meta.extractedAt,
   source: { version: meta.version, asarSha256: meta.asar.sha256 },
   scope: SCOPE,
   buckets: {
